@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+
+        .kutu{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 100px;
+            height: 100px;
+            background: #ffc1c2;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <button id="oku">Degerleri oku</button>
+    <button id="degistir">Degelreri Degistir</button>
+    <div class="kutu"></div>
+    <p id="deger"></p>
+    <script>
+        $(document).ready(function(){
+            $("#oku").click(function(){
+                var ust=$(".kutu").offset().top;
+                var sol=$(".kutu").offset().left;
+                var genislik=$(".kutu").width();
+                var yukseklik=$(".kutu").height();
+                $("p").html("üstten: "+ust+"soldan: "+sol)
+            });
+        $("#degistir").click(function(){
+            $(".kutu").offset({top:300,left:100});
+        })
+        });
+    </script>
+</body>
+</html>

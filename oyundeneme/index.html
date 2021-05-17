@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oyun Deneme</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="bg">
+    <div class="baslangic">
+        <div class="baslik"><h1>Hoşgeldiniz.</h1></div>
+        
+    </div>
+    
+
+    <img src="snake.jpg" alt="ns" id="snakeimg">
+
+    <div class="baslabutton"><a href="#">BAŞLA</a></div>
+</div>  
+<!--OYUN KISMI-->
+    <div class="oyunpart" style="display:none;">
+    
+    <div class="cerceve">
+
+        <div class="yilan"></div>
+
+        <div class="sag bs"><a href="#"><i class="fas fa-arrow-alt-circle-right sagbuton"></i></a></div>
+        <div class="sol bs"><a href="#"> <i class="fas fa-arrow-alt-circle-left"></i></a></div>
+        <div class="ust bs"><a href="#"><i class="fas fa-arrow-alt-circle-up"></i></a></div>
+        <div class="alt bs"><a href="#"><i class="fas fa-arrow-alt-circle-down"></i></a></div>
+    </div>
+    
+    
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+        $(document).ready(function(){
+            $(".baslabutton").click(function(){
+                $(".bg").hide(1000);
+                $(".oyunpart").css("display","block");
+            });
+            $(".sag").click(function(){
+                $(".yilan").animate({left:"+=20px"},100)
+            });
+            $(".sol").click(function(){
+                $(".yilan").animate({left:"-=20px"},100)
+            });
+            $(".ust").click(function(){
+                $(".yilan").css("transform","rotateY(45deg)")
+                $(".yilan").animate({top:"-=20px"},100)
+            });
+            $(".alt").click(function(){
+                $(".yilan").css("transform","rotateY(-45deg)")
+                $(".yilan").animate({top:"+=20px"},100)
+            });
+        });
+    </script>
+</body>
+</html>

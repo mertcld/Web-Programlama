@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .kutu{
+            position: absolute;
+            padding: 2px;
+            width: 300px;
+            height: 30px;
+            border-radius: 15px;
+            background: #424244;
+        }
+        .ic{
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background: #e43462;
+            border-radius: 15px;
+           
+        }
+        .ic:hover{
+            animation-name: xyz;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        @keyframes ilerle{
+            from{width: 30px;}
+            to{width: 300px;}
+        }
+        @keyframes xyz{
+            0%{width: 30px;}
+            50%{width: 300px;}
+            100%{width: 150px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="kutu"><div class="ic"></div></div>
+</body>
+</html>

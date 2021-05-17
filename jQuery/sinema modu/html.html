@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .kresim{
+        display: inline-block;
+           width: 250px;
+           height: 150px;
+           margin: 5px;
+           border: 2px solid black;
+           cursor: pointer;
+        }
+       .kresim img{
+         width: 200px;
+         height: 150px;
+           
+       }
+       .bresim .ic img{
+           width: 700px;
+           height: 400px;
+       }
+       .bresim{
+           position: fixed;
+           height: 100%;
+           width: 100%;
+           top: 0;
+           left: 0;
+           background-color: rgba(0, 0, 0, .8);
+           display: none;
+       }
+       .ic{
+           position: relative;
+           max-width: 700px;
+           margin: 0 auto;
+           background: white;
+           border: 3px solid gray;
+           padding: 10px;
+           top:50%;
+           transform: translateY(-50%);
+       }
+    </style>
+</head>
+<body>
+    <div class="kresim" id="kresim1">
+        <img src="kresim1.png" >
+    </div>
+    <div class="kresim" id="kresim2">
+        <img src="kresim2.jpg" >
+    </div>
+    <div class="kresim" id="kresim3">
+        <img src="kresim3.jpg" >
+    </div>
+    <div class="kresim" id="kresim4">
+        <img src="kresim4.jpg" >
+    </div>
+    <div class="bresim" id="bresim1">
+    <div class="ic">
+        <img src="bresim1.png" alt="">
+    </div>
+    </div>
+    <div class="bresim" id="bresim2">
+        <div class="ic">
+            <img src="bresim2.jpg" alt="">
+        </div>
+    </div>
+    <div class="bresim" id="bresim3">
+        <div class="ic">
+            <img src="bresim3.jpg" alt="">
+        </div>
+    </div>
+    <div class="bresim" id="bresim4">
+        <div class="ic">
+            <img src="bresim4.jpg" alt="">
+        </div>
+    </div>
+
+   <script>
+       $(document).ready(function(){
+        $(".kresim").click(function(){
+            var resimAdi=$(this).attr("id");
+            var resimNo=resimAdi.slice(6);
+            var tiklananResim="#bresim"+resimNo;
+            $(tiklananResim).fadeIn(400);
+        });
+        $(".bresim").click(function(){
+            $(".bresim").fadeOut(300);
+        });
+        $(".ic").click(function(){
+            event.stopPropagation();
+        });
+       });
+   </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+#container{
+    width:960px;
+    background: blueviolet;
+    height: 680px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+header#banner{
+    width: 940px;
+    height: 100px;
+    background: red;
+    margin: 0 10px;
+}
+nav{
+    width: 150px;
+    height: 450px;
+    margin: 10px;
+    background: black;
+    float: left;
+}
+section{
+    width: 600px;
+    padding-top: 10px;
+    height: 450px;
+    margin: 10px;
+    background: yellow;
+    float: left;
+}
+aside{
+    width: 150px;
+    height: 450px;
+    margin: 10px;
+    background: black;
+    float: left;
+}
+
+footer#sitesonu{
+    width: 940px;
+    height: 80px;
+    margin: 10px;
+    background: blue;
+    float: left;
+}
+header#makale{
+    width: 450px;
+    margin: 0 auto;
+    height: 50px;
+    background: chartreuse;
+}
+
+article{
+    width: 450px;
+    height: 200px;
+    background: orange;
+    margin: 10px auto;
+}
+footer#makalesonu{
+    width: 450px;
+    height: 100px;
+    background: grey;
+    margin: 10px auto;
+}

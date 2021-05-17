@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #000a5b;
+        }
+        .sidebar{
+            position: fixed;
+            width: 50px;
+            height: 100%;
+            background-color: aqua;
+            overflow: hidden;
+        }
+        .sidebar:hover{
+            width: 200px;
+            transition: .5s;
+        }
+        .sidebar ul{
+            width: 100%;
+        }
+        .sidebar ul li{
+            width: 100%;
+            list-style-type: none;
+        }
+        .sidebar ul li:hover{
+           background-color: #011486;
+        }
+        .sidebar ul li a{
+            display: flex;
+            text-decoration: none;
+            color:#fff;
+        }
+        .sidebar ul li a .simge{
+            display: block;
+            min-width: 50px;
+            height: 50px;
+            line-height:50px ;
+            text-align: center;
+        }
+        .sidebar ul li a i{
+           font-size: 25px;
+        }
+        .sidebar ul li a .basli{
+            display: block;
+            min-width: 50px;
+            height: 50px;
+            line-height:50px ;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="sidebar">
+    <ul>
+        <li>
+            <a href="#">
+                <span class="simge"><i class="fas fa-home"></i></span>
+                <span class="basli">Anasayfa</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="simge"><i class="fas fa-user-circle"></i></span>
+                <span class="basli">Profil  </span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="simge"><i class="fas fa-envelope-open-text"></i></span>
+                <span class="basli">Mesajlar</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="simge"><i class="fas fa-info-circle"></i></span>
+                <span class="basli">Yardım</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+</body>
+</html>

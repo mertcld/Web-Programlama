@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    .kutu{
+        width: 200px;
+        height: 200px;
+        background: darkcyan;
+        position: relative;
+    }
+    #sag , #sol ,#yukari,#asagi{
+        width: 50px;
+        height: 50px;
+        position: relative;
+    }
+    #ortala{
+       
+        text-align: center;
+    }
+</style>
+</head>
+
+<body>
+    <div class="kutu"></div>
+    <div id="ortala">
+    <input type="button" value="saga" id="sag">
+    <input type="button" value="sola" id="sol">
+    <input type="button" value="yukarı" id="yukari">
+    <input type="button" value="asagı" id="asagi">
+</div>
+
+
+<script>
+    $(document).ready(function(){
+        $("#sag").click(function(){
+            var x=Math.random()*500;
+            var deger=$(".kutu").offset().left;
+            if(deger > 1456){
+                $(".kutu").animate({left:"0px"},5000);
+            }
+            $(".kutu").animate({left:"+="+x+"px"},1);
+        });
+        $("#sol").click(function(){
+            $(".kutu").animate({left:"-=20px"});
+        });
+        $("#yukari").click(function(){
+            $(".kutu").animate({top:"-=20px"});
+        });
+        $("#asagi").click(function(){
+            $(".kutu").animate({top:"+=20px"});
+        });
+
+    });
+</script>
+</body>
+</html>

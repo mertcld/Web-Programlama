@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-type: none;
+}
+body{
+    font-size: 16px;
+    font-family: monospace;
+}
+.wrapper{
+    width: 100%;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background: url("images/bokeh_car_lights_bg.jpg"),url("images/dark_tint.png");
+    background-position: center center;
+    position: relative;
+    box-sizing: border-box;
+    background-size: cover;
+    display: flex;
+}
+header{
+    margin: 0 auto;
+    position: absolute;
+    width: 100%;
+    align-self: flex-start;
+}
+header h1{
+    position: absolute;
+    font-size: 1.5em;
+    margin-left: 30px;
+    top: 30px;
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+    float: left;
+}
+header nav.menu ul{
+    position: absolute;
+    float: right;
+    right: 20px;
+    top: 0;
+}
+header nav.menu ul li{
+    display: block;
+    padding: 30px;
+    float: left;
+}
+header nav.menu ul li a{
+    color: white;
+    padding: 30px;
+}

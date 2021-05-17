@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>h1 bu</h1>
+    <h2>sa</h2>
+    <h3>as</h3>
+    <h4>nbr</h4>
+    <script>
+       $(document).ready(function(){
+        function show(){
+            gizle();
+            goster();  
+        }
+        function goster(){
+            
+            $("div").fadeIn(1000);
+        
+        }
+        function gizle(){
+            $("div").fadeOut(1000);
+        }
+        for(let i=0;i<10;i++){
+            show();
+    }
+});
+    </script>
+</div>
+</body>
+</html>

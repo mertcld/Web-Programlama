@@ -1,0 +1,41 @@
+
+{
+    "kisiler":[
+      {
+        "ad":"Ahmet",
+        "soyad":"Koç",
+        "yas":37,
+        "emekli":false,
+        "maas":null,
+        "hobi":["müzik","spor","resim"]
+      },
+      {
+        "ad":"Mert",
+        "soyad":"Bulut",
+        "yas":19,
+        "emekli":false,
+        "maas":700,
+        "hobi":["kod","müzik","oyun"] 
+      },
+      {
+        "ad":"Seda",
+        "soyad":"İlgün",
+        "yas":0,
+        "emekli":false,
+        "maas":null,
+        "hobi":["doğmak","ağlamak","süt içmek"] 
+      }
+
+
+    ],
+    "ogrenciler":[
+        {
+         "ad":"Mert",
+         "soyad":"Kel",
+         "sınıf":"14",
+         "tckno":"691239123"
+        }
+    ]
+
+
+}

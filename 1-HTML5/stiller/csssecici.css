@@ -1,0 +1,288 @@
+@charset "utf-8";
+/* CSS Document */
+
+		@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700');
+
+	body{
+		background: #f5f5f5;
+		font-family: 'Crimson Text', serif;
+		color: #18314F;
+	}
+	.baslik{
+		font-size: 26px; 
+	}
+	h1{text-align: center;
+	letter-spacing: 4px;
+	color: #18314F;
+		font-weight: 400;
+
+	}
+
+	section{
+		width:800px;
+		height: 500px;
+		background: #FFFFFF;
+		border: 1px solid black;
+		margin: 20px auto;
+		box-shadow: 0 0 20px rgba(0,0,0,.25);
+		padding: 10px;
+
+	}
+	h2 {
+		font-weight: 400;
+		font-size: 1rem;
+		margin-bottom: 3em;
+		letter-spacing: 8px;
+		text-align: center;
+		color: #8BBEB2;
+}
+	
+	h2::after {
+	  content: '';
+	  display: block;
+	  border-bottom: 1px solid rgba(24,49,79,.3);
+	  width: 20%;
+	  margin: 20px auto 0;
+}
+
+	p{
+		color: #18314F;
+		font-size: 18px;
+		letter-spacing: 3px;
+		margin: 5px;
+}
+
+.kutular{
+width: 80px;
+padding: 30px 0;
+border: 1px solid rgba(0,0,0,1.00);
+float: left;
+margin: 10px;
+text-align: center;
+font-size: 18px;
+font-weight: 500;
+}
+
+/*********************** 1- Evrensel Seçici( * )**************************/
+
+
+
+
+
+
+
+
+
+
+/******************* 2- Class Seçici(Sınıf Seçici .etiket)*******************/
+
+.sinif{background: red;
+font-size: 20px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************ 3- Id Seçici (Kimlik Seçici #etiket)****************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************** 4- Etiket Seçici (a, div, p)****************************/
+
+
+hr{width: 700px; height: 3px; background-color: rebeccapurple;}
+
+
+
+
+
+
+
+
+
+
+
+
+/********************** 5- Çoklu Seçiciler(X,Y,Z) *****************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************* 6- İç Nesne Seçiciler (Torun Seçiciler X Y)*****************************/
+
+
+
+
+
+
+
+
+
+
+
+
+/********************* 7- Yanyana Seçiciler(X+Y)*****************************/
+
+.yanyana h3+p{color:red;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************* 8- Çocuk Seçiciler(X>Y) *****************************/
+
+.cocuk > p{color:red}
+
+
+
+
+
+
+
+
+
+
+/********************* 9- Bitişik Seçiciler(X~Y) *****************************/
+
+.bitisik ul~p{
+	color:white;background-color: blueviolet;
+}
+
+
+
+
+
+
+
+
+
+/********************* 10- Nitelik Seçici(X[Y]) *****************************/
+input[type=text]{
+	background: red;
+}
+input[type=button]{
+	background: red;
+}
+input[type=radio]{
+	transform: scale(2);
+}
+
+
+
+
+
+
+
+
+
+
+/*********-11- Nitelik Seçici(X[Nitelik='Değer'] *, $, ^, ~ ) *************/
+
+
+.ilk p::first-letter{font-size: 26px;}
+.ilk p::first-line{color:red;}
+
+
+
+
+
+
+
+
+
+
+
+
+/*********************12- X::first-letter ve X::first-line *****************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************13- X::before ve X::after **************************/
+
+
+
+
+
+
+
+
+
+
+
+
+/*************************14- Nth(n'inci)-child  ***********************/
+
+.kutu .kutular:nth-child(3){
+	background: #FB8B8D;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
