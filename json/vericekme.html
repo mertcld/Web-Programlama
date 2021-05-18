@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button ondblclick="vericek()">Veri Çek</button>
+    <div id="icerik"></div>
+    
+    <script>
+        function vericek(){
+        var istek = new XMLHttpRequest();
+        istek.onload=function(){
+            if(this.readyState==4 && this.status==200){
+                var data=JSON.parse(this.responseText);
+                for(i=0;i<3;i++){
+
+               
+                document.getElementById("icerik").innerHTML += "Ad: "+data.kisiler[i].ad+"<br>";
+                document.getElementById("icerik").innerHTML += "Soyad: "+data.kisiler[i].soyad+"<br>";
+                document.getElementById("icerik").innerHTML += "Yas: "+data.kisiler[i].yas+"<br>";
+                document.getElementById("icerik").innerHTML += "Emekli: "+data.kisiler[i].emekli+"<br>";
+                document.getElementById("icerik").innerHTML += "Maaş: "+data.kisiler[i].maas+"<br>";
+                document.getElementById("icerik").innerHTML += "Hobi: "+data.kisiler[i].hobi+"<br>";
+                document.getElementById("icerik").innerHTML+= "<br><br><br>";
+            }
+            }else{
+                console.log("bilinmeyen hata meydana geldi.");
+            }
+        }
+        
+        istek.open("Get","veri.json",true);
+        istek.send();
+        
+    }
+    </script>
+</body>
+</html>
